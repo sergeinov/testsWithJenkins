@@ -2,6 +2,7 @@ package com.demoqa.pages;
 
 import com.codeborne.selenide.SelenideElement;
 import com.demoqa.pages.components.CalendarComponent;
+import com.demoqa.tests.TestBase;
 import io.qameta.allure.Step;
 
 import java.io.File;
@@ -11,7 +12,7 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class PracticeFormPage {
+public class PracticeFormPage extends TestBase {
 
     private final String NAME_TITLE = "Student Registration Form";
     private final String NAME_TITLE_RESULT = "Thanks for submitting the form";
