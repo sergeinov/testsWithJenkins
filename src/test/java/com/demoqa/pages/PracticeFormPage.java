@@ -38,7 +38,7 @@ public class PracticeFormPage {
 
     public CalendarComponent calendar = new CalendarComponent();
 
-    @Step("Open page: {URL} and check title")
+    @Step("Open page: and check title")
     public PracticeFormPage openPage() {
         open(URL);
         formTitleLocator.shouldHave(text(NAME_TITLE));
@@ -61,7 +61,7 @@ public class PracticeFormPage {
     }
 
     @Step("Enter Email: {value}")
-    public PracticeFormPage typeEmail(String value) {                           // enter email
+    public PracticeFormPage typeEmail(String value) {
         emailLocator.setValue(value);
 
         return this;
@@ -134,10 +134,9 @@ public class PracticeFormPage {
 
     @Step("Checking filled data: {key}:{value}")
     public PracticeFormPage checkResultValue(String key, String value) {
-        tableValueLocator.$(byText(key)).parent().shouldHave(text(value));      // checking the fields filled with data
+        tableValueLocator.$(byText(key)).parent().shouldHave(text(value));
 
         return this;
     }
-
 
 }
