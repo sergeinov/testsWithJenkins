@@ -11,7 +11,7 @@ public class TestBase {
     static void setUp() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
-        Configuration.browser = "firefox";
+        Configuration.browser = "chrome";
         Configuration.startMaximized = true;
     }
 
