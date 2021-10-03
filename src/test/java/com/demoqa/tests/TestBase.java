@@ -11,13 +11,16 @@ public class TestBase {
     @BeforeAll
     static void setUp() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+        Configuration.startMaximized = true;
 
+        // options for selenoid
         DesiredCapabilities capabilities = new DesiredCapabilities();
+        //set access  for video into selenoid
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
-
+        // set options
         Configuration.browserCapabilities = capabilities;
-        Configuration.startMaximized = true;
+        // url of selenoid
         Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub/";
     }
 
