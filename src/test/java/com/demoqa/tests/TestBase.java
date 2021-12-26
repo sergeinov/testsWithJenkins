@@ -23,7 +23,8 @@ public class TestBase {
         // set options
         Configuration.browserCapabilities = capabilities;
         // url of selenoid
-        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub/";
+//        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub/";
+        Configuration.remote = "137.184.53.141:8080";
     }
 
     // add attachments into Allure report
